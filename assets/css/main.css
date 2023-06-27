@@ -104,3 +104,9 @@
     font-family: "NunitoSans", sans-serif;
   }
 }
+
+@layer components {
+  .form-control {
+    @apply p-6 py-4 rounded-xl bg-white text-gray outline-none
+  }
+}
