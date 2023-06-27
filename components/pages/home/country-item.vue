@@ -25,7 +25,7 @@
       </div>
 
       <!--   #CAPITAL   -->
-      <div>
+      <div v-if="data.capital">
         <b>Capital: </b>
         <span v-for="capital in data.capital">{{capital}}</span>
       </div>

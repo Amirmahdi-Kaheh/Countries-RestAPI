@@ -3,8 +3,10 @@
     <div class="flex mb-6 items-center justify-between">
       <div class="flex items-center gap-4">
         <countries-search @submit="(value)=> filter.search = value" />
-        <button class="p-3.5 rounded-xl bg-white active:scale-90 transition-all" @click="randomChoice">
+        <button class="flex items-center gap-2 p-3.5 group rounded-xl bg-white active:scale-90 transition-all" @click="randomChoice">
           <dices-icon />
+
+          <span class="group-hover:block hidden text-sm text-gray">Pick Random!</span>
         </button>
       </div>
 
@@ -161,7 +163,10 @@ export default {
     },
     async getAllByRegion(region){
       this.$axios.get(`/v3.1/region/${region}`).then((response)=>{
-        this.countries = response.data
+        this.countries = response.data;
+
+        this.sort.population = 'none';
+        this.sort.name = 'none';
       })
     },
     async getAllCountries(){
