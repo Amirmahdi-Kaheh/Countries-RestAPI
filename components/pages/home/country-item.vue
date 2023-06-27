@@ -2,7 +2,7 @@
   <nuxt-link :to="`/countries/${data.cca3}`" class="col-span-3 relative group flex flex-col justify-between rounded-xl overflow-hidden p-6 transition-all">
     <div class="absolute right-0 bottom-0 w-full h-3/4 bg-white rounded-xl -z-10 group-hover:h-full transition-all"></div>
     <div>
-      <img class="w-full aspect-[3/2] object-cover rounded-xl border border-silver" :src="data.flags.png"  :alt="data.flags.alt" loading="lazy">
+      <img class="w-full aspect-[3/2] object-cover rounded-xl border border-silver" :src="data.flags.svg"  :alt="data.flags.alt" loading="lazy">
 
       <!--   #COUNTRY NAME   -->
       <div class="mt-4">
