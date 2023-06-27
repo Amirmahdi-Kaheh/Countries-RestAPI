@@ -98,6 +98,7 @@
   /* APPLY FONT FAMILY TO DOCUMENT */
   body {
     font-family: "NunitoSans", sans-serif;
+    @apply bg-background
   }
   *{
     font-family: "NunitoSans", sans-serif;
