@@ -3,10 +3,10 @@
     <div class="flex mb-6 items-center justify-between">
       <div class="flex items-center gap-4">
         <countries-search @submit="(value)=> filter.search = value" />
-        <button class="flex items-center gap-2 p-3.5 group rounded-xl bg-white active:scale-90 transition-all" @click="randomChoice">
+        <button class="flex items-center gap-2 p-3.5 group rounded-xl bg-white dark:bg-white-dark active:scale-90 transition-all" @click="randomChoice">
           <dices-icon />
 
-          <span class="group-hover:block hidden text-sm text-gray">Pick Random!</span>
+          <span class="group-hover:block hidden text-sm text-gray dark:text-gray-dark">Pick Random!</span>
         </button>
       </div>
 
@@ -61,9 +61,6 @@ export default {
     return {
       title: 'Where in the World ?'
     }
-  },
-  mounted() {
-    document.documentElement.classList.remove('dark')
   },
   data() {
     return {

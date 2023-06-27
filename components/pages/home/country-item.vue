@@ -1,13 +1,13 @@
 <template>
   <nuxt-link :to="`/countries/${data.cca3.toLowerCase()}`" class="col-span-3 relative group flex flex-col justify-between rounded-xl overflow-hidden p-6 transition-all">
-    <div class="absolute right-0 bottom-0 w-full h-3/4 bg-white rounded-xl -z-10 group-hover:h-full transition-all"></div>
+    <div class="absolute right-0 bottom-0 w-full h-3/4 bg-white dark:bg-white-dark rounded-xl -z-10 group-hover:h-full transition-all"></div>
     <div>
       <img class="country-flag" :src="data.flags.svg"  :alt="data.flags.alt" loading="lazy">
 
       <!--   #COUNTRY NAME   -->
       <div class="mt-4">
         <h4 class="text-lg font-semibold">{{data.name.common}}</h4>
-        <p class="text-sm text-gray w-full truncate" :title="data.name.official">{{data.name.official}}</p>
+        <p class="text-sm text-gray dark:text-gray-dark w-full truncate" :title="data.name.official">{{data.name.official}}</p>
       </div>
     </div>
 

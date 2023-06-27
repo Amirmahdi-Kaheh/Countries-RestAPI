@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :class="userDefaultTheme">
     <TheHeader/>
 
     <div class="container my-10">
@@ -13,9 +13,20 @@
 <script>
 import TheHeader from "~/components/layouts/TheHeader";
 import TheFooter from "~/components/layouts/TheFooter";
+import {mapGetters} from "vuex";
 export default {
   name: "default",
-  components: {TheFooter, TheHeader}
+  components: {TheFooter, TheHeader},
+  head(){
+    return{
+      htmlAttrs:{
+        class: this.userDefaultTheme
+      },
+    }
+  },
+  computed: {
+    ...mapGetters('theme', ['userDefaultTheme']),
+  }
 }
 </script>
 

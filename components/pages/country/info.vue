@@ -3,40 +3,40 @@
     <!--   #NATIVE NAME   -->
     <div v-if="Object.values(data.name.nativeName).length > 0">
       <b>Native Name: </b>
-      <span class="text-gray">{{Object.values(data.name.nativeName)[0].common}}</span>
+      <span class="text-gray dark:text-gray-dark">{{Object.values(data.name.nativeName)[0].common}}</span>
     </div>
 
     <!--   #TOP LEVEL DOMAIN (tld)   -->
     <div v-if="data.tld.length > 0">
       <b>Top Level Domain: </b>
-      <span class="text-gray">{{data.tld[0]}}</span>
+      <span class="text-gray dark:text-gray-dark">{{data.tld[0]}}</span>
     </div>
 
     <!--   #POPULATION   -->
     <div>
       <b>Population: </b>
-      <span class="text-gray">{{data.population.toLocaleString()}}</span>
+      <span class="text-gray dark:text-gray-dark">{{data.population.toLocaleString()}}</span>
     </div>
 
     <!--   #CURRENCY   -->
     <div v-if="Object.values(data.currencies).length > 0">
       <b>Currency: </b>
-      <span class="text-gray">
+      <span class="text-gray dark:text-gray-dark">
          {{Object.values(data.currencies)[0].name}}
-         <span class="px-3 py-1 bg-silver rounded-md">{{Object.values(data.currencies)[0].symbol}}</span>
+         <span class="px-3 py-1 bg-silver dark:bg-silver-dark rounded-md">{{Object.values(data.currencies)[0].symbol}}</span>
       </span>
     </div>
 
     <!--   #REGION   -->
     <div>
       <b>Region: </b>
-      <span class="text-gray">{{data.region}}</span>
+      <span class="text-gray dark:text-gray-dark">{{data.region}}</span>
     </div>
 
     <!--   #LANGUAGES   -->
     <div>
       <b>Languages: </b>
-      <span class="text-gray" v-for="(lang, index) in data.languages" :key="index">
+      <span class="text-gray dark:text-gray-dark" v-for="(lang, index) in data.languages" :key="index">
               {{lang}}
               <span v-show="">{{ index }}</span>
             </span>
@@ -45,13 +45,13 @@
     <!--   #SUBREGION   -->
     <div v-if="data.subregion">
       <b>Sub Region: </b>
-      <span class="text-gray">{{data.subregion}}</span>
+      <span class="text-gray dark:text-gray-dark">{{data.subregion}}</span>
     </div>
 
     <!--   #CAPITAL   -->
     <div v-if="data.capital.length > 0">
       <b>Capital: </b>
-      <span class="text-gray">{{data.capital[0]}}</span>
+      <span class="text-gray dark:text-gray-dark">{{data.capital[0]}}</span>
     </div>
   </div>
 </template>

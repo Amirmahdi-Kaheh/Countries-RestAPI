@@ -136,24 +136,24 @@
 
   /* APPLY FONT FAMILY TO DOCUMENT */
   body {
-    font-family: "NunitoSans", 'YekanBakh';
-    @apply bg-background
+    font-family: "NunitoSans", 'YekanBakh', serif;
+    @apply bg-background dark:bg-background-dark text-typography dark:text-typography-dark transition-all
   }
   *{
-    font-family: "NunitoSans" , 'YekanBakh';
+    font-family: "NunitoSans", 'YekanBakh', serif;
   }
 }
 
 @layer components {
   .form-control {
-    @apply p-6 py-4 rounded-xl bg-white text-gray outline-none
+    @apply p-6 py-4 rounded-xl bg-white dark:bg-white-dark text-gray outline-none
   }
 
   .country-flag {
-    @apply w-full aspect-[3/2] object-cover rounded-xl border border-silver
+    @apply w-full aspect-[3/2] object-cover rounded-xl border border-silver dark:border-silver-dark
   }
 
   .country-flag-icon {
-    @apply w-10 aspect-[3/2] object-cover rounded-md border border-silver
+    @apply w-10 aspect-[3/2] object-cover rounded-md border border-silver dark:border-silver-dark
   }
 }

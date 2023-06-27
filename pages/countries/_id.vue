@@ -2,8 +2,8 @@
   <div>
     <!--  HEAD START  -->
     <div class="flex items-center">
-      <nuxt-link to="/" class="flex items-center gap-4 text-gray">
-        <div class="p-2 rounded-xl bg-white">
+      <nuxt-link to="/" class="flex items-center gap-4 text-gray dark:text-gray-dark">
+        <div class="p-2 rounded-xl bg-white dark:bg-white-dark">
           <arrow-icon />
         </div>
 
@@ -18,14 +18,14 @@
         <img class="country-flag" :src="countryData.flags.svg" :alt="countryData.flags.alt" loading="lazy">
 
         <div class="grid grid-cols-2 gap-4 mt-4">
-          <a :href="countryData.maps.openStreetMaps" target="_blank" class="flex items-center justify-center gap-2 p-4 bg-silver text-gray rounded-xl">OpenStreet Map</a>
-          <a :href="countryData.maps.googleMaps" target="_blank" class="flex items-center justify-center gap-2 p-4 bg-silver text-gray rounded-xl">Google Map</a>
+          <a :href="countryData.maps.openStreetMaps" target="_blank" class="flex items-center justify-center gap-2 p-4 bg-silver dark:bg-silver-dark text-gray dark:text-gray-dark rounded-xl">OpenStreet Map</a>
+          <a :href="countryData.maps.googleMaps" target="_blank" class="flex items-center justify-center gap-2 p-4 bg-silver dark:bg-silver-dark text-gray dark:text-gray-dark rounded-xl">Google Map</a>
         </div>
       </div>
 
       <div class="col-span-7">
         <h1 class="text-3xl font-bold">{{countryData.name.common}}</h1>
-        <p class="text-xl text-gray">{{countryData.name.official}}</p>
+        <p class="text-xl text-gray dark:text-gray-dark">{{countryData.name.official}}</p>
 
         <!--    #INFORMATION START    -->
         <pages-country-info :data="countryData" />
