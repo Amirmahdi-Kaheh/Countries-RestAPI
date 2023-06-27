@@ -2,7 +2,7 @@
   <div>
     <TheHeader/>
 
-    <div class="container my-12">
+    <div class="container my-10">
       <nuxt />
     </div>
 
