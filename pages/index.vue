@@ -62,6 +62,9 @@ export default {
       title: 'Where in the World ?'
     }
   },
+  mounted() {
+    document.documentElement.classList.remove('dark')
+  },
   data() {
     return {
       filter: {

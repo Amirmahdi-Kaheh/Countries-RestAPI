@@ -1,7 +1,7 @@
 <template>
   <div class="grid grid-cols-2 gap-2 mt-10">
     <!--   #NATIVE NAME   -->
-    <div v-if="data.name.nativeName.length > 0">
+    <div v-if="Object.values(data.name.nativeName).length > 0">
       <b>Native Name: </b>
       <span class="text-gray">{{Object.values(data.name.nativeName)[0].common}}</span>
     </div>
@@ -19,7 +19,7 @@
     </div>
 
     <!--   #CURRENCY   -->
-    <div v-if="data.currencies.length > 0">
+    <div v-if="Object.values(data.currencies).length > 0">
       <b>Currency: </b>
       <span class="text-gray">
          {{Object.values(data.currencies)[0].name}}
