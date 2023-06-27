@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="flex mb-6 items-center justify-between pb-6 border-b-2 border-b-silver">
+    <div class="flex mb-6 items-center justify-between">
       <div class="flex items-center gap-4">
         <countries-search @submit="(value)=> filter.search = value" />
         <button class="p-3.5 rounded-xl bg-white active:scale-90 transition-all" @click="randomChoice">
@@ -9,10 +9,11 @@
       </div>
 
       <div>
-        <countries-filter />
         <countries-sort :name="sort.name" :population="sort.population" @sort-name="sortedByName" @sort-population="sortedByPopulation" />
       </div>
     </div>
+
+    <countries-filter :region="regionQuery" />
 
     <div class="grid grid-cols-12 gap-6">
       <country-item v-for="(item, index) in filteredCountries" :key="index" :data="item" />
@@ -31,17 +32,25 @@ import Fuse from 'fuse.js';
 export default {
   name: 'IndexPage',
   components: {DicesIcon, CountriesSort, CountriesFilter, CountriesSearch, CountryItem},
-  async asyncData ({ app, store, error }) {
+  async asyncData ({ app,query, store, error }) {
     try {
-      const [
-        countriesAllData
-      ] = await Promise.all([
-        app.$axios.get('/v3.1/all?fields=name,flags,population,region,capital,cca3')
-      ]);
+      if(query.region) {
+        const countriesAllDataByRegion = await app.$axios.get(`/v3.1/region/${query.region}`)
 
-      return {
-        countries: countriesAllData.data
-      };
+        return {
+          countries: countriesAllDataByRegion.data
+        };
+      } else {
+        const [
+          countriesAllData
+        ] = await Promise.all([
+          app.$axios.get('/v3.1/all?fields=name,flags,population,region,capital,cca3')
+        ]);
+
+        return {
+          countries: countriesAllData.data
+        };
+      }
     } catch (err) {
       throw err
     }
@@ -62,7 +71,23 @@ export default {
       }
     }
   },
+  watch: {
+    regionQuery(newVal) {
+      try {
+        this.getAllByRegion(newVal.toLowerCase())
+      } catch {
+        this.getAllCountries()
+      }
+    }
+  },
   computed:{
+    regionQuery () {
+      try {
+        return this.$route.query.region
+      }catch {
+        return null
+      }
+    },
     filteredCountries () {
       if(this.filter.search) {
         const fuse = new Fuse(this.countries, {
@@ -134,9 +159,14 @@ export default {
       }
 
     },
-    async getAll(){
-      this.$axios.get('/v3.1/alpha?codes=IRN').then((response)=>{
-        this.response = response.data
+    async getAllByRegion(region){
+      this.$axios.get(`/v3.1/region/${region}`).then((response)=>{
+        this.countries = response.data
+      })
+    },
+    async getAllCountries(){
+      this.$axios.get(`/v3.1/all`).then((response)=>{
+        this.countries = response.data
       })
     },
     randomChoice() {

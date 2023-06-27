@@ -1,0 +1,58 @@
+<template>
+  <div class="flex items-center gap-6 py-4 mb-6 border-t-2 border-b-2 border-silver">
+   <div class="flex items-center gap-4">
+     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+       <path d="M22 3H2L10 12.46V19L14 21V12.46L22 3Z" class="stroke-gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+     </svg>
+
+     <p>Filter By Region</p>
+   </div>
+
+    <div class="flex items-center gap-1">
+      <button @click="setFilterQuery(null)" :class="['px-4 py-2 rounded-xl', {'bg-silver pointer-events-none': !region}]">
+        All
+      </button>
+
+      <button @click="setFilterQuery('asia')" :class="['px-4 py-2 rounded-xl', {'bg-silver pointer-events-none': region === 'asia'}]">
+        Asia
+      </button>
+
+      <button @click="setFilterQuery('europe')" :class="['px-4 py-2 rounded-xl', {'bg-silver pointer-events-none': region === 'europe'}]">
+        Europe
+      </button>
+
+      <button @click="setFilterQuery('africa')" :class="['px-4 py-2 rounded-xl', {'bg-silver pointer-events-none': region === 'africa'}]">
+        Africa
+      </button>
+
+      <button @click="setFilterQuery('america')" :class="['px-4 py-2 rounded-xl', {'bg-silver pointer-events-none': region === 'america'}]">
+        America
+      </button>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "CountriesFilter",
+  props: {
+    region: {
+      default: null,
+      type: String
+    }
+  },
+  methods: {
+    setFilterQuery(region){
+      if(region){
+        this.$router.replace({ query: {region: region} })
+      }else {
+        this.$router.replace('/')
+      }
+    }
+  }
+}
+</script>
+
+<style scoped>
+
+</style>
