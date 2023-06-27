@@ -1,10 +1,25 @@
 <template>
+  <div class="border-t-2 border-silver">
+    <div class="container flex items-center justify-between py-6">
+      <p>
+        Made with Love & ☕️ By
+        <a target="_blank" href="https://www.linkedin.com/in/mahdiar-kaheh-1b65291a6/">Mahdiar</a>
+        2023&copy;
+      </p>
 
+
+      <a target="_blank" href="https://github.com/Amirmahdi-Kaheh/Countries-RestAPI">
+        <github-icon />
+      </a>
+    </div>
+  </div>
 </template>
 
 <script>
+import GithubIcon from "@/components/global/icons/github-icon";
 export default {
-  name: "TheFooter"
+  name: "TheFooter",
+  components: {GithubIcon}
 }
 </script>
 
