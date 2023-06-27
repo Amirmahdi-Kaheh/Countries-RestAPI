@@ -95,13 +95,52 @@
     url('~assets/fonts/NunitoSans/ttf/nunito-sans-v15-latin-900.ttf') format('truetype') /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
   }
 
+  @font-face {
+    font-family: YekanBakh;
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("~assets/fonts/yekanbakh/eot/YekanBakhFaNum03Light.eot");
+    src: url("~assets/fonts/yekanbakh/eot/YekanBakhFaNum03Light.eot?#iefix")
+    format("embedded-opentype"),
+      /* IE6-8 */
+    url("~assets/fonts/yekanbakh/woff/YekanBakhFaNum03Light.woff")
+    format("woff")
+  }
+
+  @font-face {
+    font-family: YekanBakh;
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("~assets/fonts/yekanbakh/eot/YekanBakhFaNum05Medium.eot");
+    src: url("~assets/fonts/yekanbakh/eot/YekanBakhFaNum05Medium.eot?#iefix")
+    format("embedded-opentype"),
+      /* IE6-8 */
+    url("~assets/fonts/yekanbakh/woff/YekanBakhFaNum05Medium.woff")
+    format("woff")
+  }
+
+  @font-face {
+    font-family: YekanBakh;
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url("~assets/fonts/yekanbakh/eot/YekanBakhFaNum07Heavy.eot");
+    src: url("~assets/fonts/yekanbakh/eot/YekanBakhFaNum07Heavy.eot?#iefix")
+    format("embedded-opentype"),
+      /* IE6-8 */
+    url("~assets/fonts/yekanbakh/woff/YekanBakhFaNum07Heavy.woff")
+    format("woff")
+  }
+
   /* APPLY FONT FAMILY TO DOCUMENT */
   body {
-    font-family: "NunitoSans", sans-serif;
+    font-family: "NunitoSans", 'YekanBakh';
     @apply bg-background
   }
   *{
-    font-family: "NunitoSans", sans-serif;
+    font-family: "NunitoSans" , 'YekanBakh';
   }
 }
 
