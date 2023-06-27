@@ -16,19 +16,22 @@ export default {
       const [
         countriesAllData
       ] = await Promise.all([
-        app.$axios.get('/v3.1/all')
+        app.$axios.get('/v3.1/all?fields=name,flags,population,region,capital')
       ]);
 
       return {
         countries: countriesAllData.data
       };
     } catch (err) {
-      console.log(err);
+      throw err
     }
+  },
+  created() {
+    // this.getAll()
   },
   methods: {
     async getAll(){
-      this.$axios.get('/v3.1/name/Grmany').then((response)=>{
+      this.$axios.get('/v3.1/alpha?codes=400').then((response)=>{
         this.response = response.data
       })
     }
