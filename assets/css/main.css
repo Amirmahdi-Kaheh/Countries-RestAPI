@@ -148,4 +148,12 @@
   .form-control {
     @apply p-6 py-4 rounded-xl bg-white text-gray outline-none
   }
+
+  .country-flag {
+    @apply w-full aspect-[3/2] object-cover rounded-xl border border-silver
+  }
+
+  .country-flag-icon {
+    @apply w-10 aspect-[3/2] object-cover rounded-md border border-silver
+  }
 }

@@ -15,7 +15,7 @@
     <!--  BODY START  -->
     <div class="grid grid-cols-12 items-start gap-10 mt-10">
       <div class="col-span-5 sticky top-36">
-        <img class="w-full aspect-[3/2] object-cover rounded-xl border border-silver" :src="countryData.flags.svg" :alt="countryData.flags.alt" loading="lazy">
+        <img class="country-flag" :src="countryData.flags.svg" :alt="countryData.flags.alt" loading="lazy">
 
         <div class="grid grid-cols-2 gap-4 mt-4">
           <a :href="countryData.maps.openStreetMaps" target="_blank" class="flex items-center justify-center gap-2 p-4 bg-silver text-gray rounded-xl">OpenStreet Map</a>
@@ -32,7 +32,7 @@
         <!--    #INFORMATION END    -->
 
         <!--   #BORDERS START     -->
-        <pages-country-borders :data="countryData.borders" />
+        <pages-country-borders :data="countryBorders" />
         <!--   #BORDERS END     -->
 
 
@@ -63,9 +63,20 @@ export default {
         app.$axios.get(`/v3.1/alpha/${params.id}?fields=name,capital,borders,population,region,subregion,tld,currencies,languages,flags,translations,maps`)
       ]);
 
-      return {
-        countryData: countryAllData.data
-      };
+      if(countryAllData.data.borders.length > 0){
+        const bordersList = countryAllData.data.borders.join(",").toLowerCase()
+        const countryBorderData = await app.$axios.get(`/v3.1/alpha?codes=${bordersList}&fields=name,cca3,flags`)
+
+        return  {
+          countryBorders: countryBorderData.data,
+          countryData: countryAllData.data,
+        }
+      }else {
+        return  {
+          countryBorders: null,
+          countryData: countryAllData.data,
+        }
+      }
     } catch (err) {
       throw err
     }
