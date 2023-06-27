@@ -1,5 +1,5 @@
 <template>
-  <header class="sticky top-0 w-full py-8 bg-white z-30 shadow-2xl shadow-silver">
+  <header class="sticky top-0 w-full py-8 bg-white z-30 border-b-2 border-silver">
     <div class="container">
       <nuxt-link to="/" class="flex items-center gap-4 group">
         <img src="~/static/icon.png" class="group-hover:animate-spin" alt="">
