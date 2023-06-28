@@ -2,7 +2,7 @@
   <nuxt-link :to="`/countries/${data.cca3.toLowerCase()}`" class="col-span-3 relative group flex flex-col justify-between rounded-xl overflow-hidden p-6 transition-all">
     <div class="absolute right-0 bottom-0 w-full h-3/4 bg-white dark:bg-white-dark rounded-xl -z-10 group-hover:h-full transition-all"></div>
     <div>
-      <img class="country-flag" :src="data.flags.svg"  :alt="data.flags.alt" loading="lazy">
+      <v-lazy-image class="country-flag" :src="data.flags.svg" :alt="data.flags.alt" />
 
       <!--   #COUNTRY NAME   -->
       <div class="mt-4">
@@ -34,8 +34,11 @@
 </template>
 
 <script>
+import VLazyImage from "v-lazy-image/v2";
+
 export default {
   name: "country-item",
+  components: {VLazyImage},
   props: {
     data: {
       default: null,

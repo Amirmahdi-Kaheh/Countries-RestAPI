@@ -15,7 +15,7 @@
     <!--  BODY START  -->
     <div class="grid grid-cols-12 items-start gap-10 mt-10">
       <div class="col-span-5 sticky top-36">
-        <img class="country-flag" :src="countryData.flags.svg" :alt="countryData.flags.alt" loading="lazy">
+        <v-lazy-image class="country-flag" :src="countryData.flags.svg" :alt="countryData.flags.alt" />
 
         <div class="grid grid-cols-2 gap-4 mt-4">
           <a :href="countryData.maps.openStreetMaps" target="_blank" class="flex items-center justify-center gap-2 p-4 bg-silver dark:bg-silver-dark text-gray dark:text-gray-dark rounded-xl">OpenStreet Map</a>
@@ -47,9 +47,11 @@
 
 <script>
 import ArrowIcon from "~/components/global/icons/arrow-icon";
+import VLazyImage from "v-lazy-image/v2";
+
 export default {
   name: "_id",
-  components: {ArrowIcon},
+  components: {ArrowIcon, VLazyImage},
   head () {
     return {
       title: 'We Are in ' + this.countryData.name.common
