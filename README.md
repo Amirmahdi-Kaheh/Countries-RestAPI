@@ -27,13 +27,13 @@ Make sure you have the following software installed on your machine:
 ### Step 1: Clone the Repository
 
 ```shell
-git clone https://github.com/your-username/your-project.git
+git clone https://github.com/Amirmahdi-Kaheh/Countries-RestAPI.git
 ```
 
 ### Step 2: Clone the Repository
 
 ```shell
-cd your-project
+cd Countries-RestAPI
 ```
 
 ### Step 3: Install Dependencies
