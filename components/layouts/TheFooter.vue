@@ -2,7 +2,7 @@
   <div class="border-t-2 border-silver dark:border-silver-dark">
     <div class="container flex items-center justify-between py-6">
       <p>
-        Made with Love & ☕️ By
+        Made with ❤️ & ☕️ By
         <a class="hover:text-yellow" target="_blank" href="https://www.linkedin.com/in/mahdiar-kaheh-1b65291a6/">Mahdiar</a>
         2023&copy;
       </p>

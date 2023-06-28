@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="flex mb-6 items-center justify-between">
+    <div class="flex sm:mb-6 mb-4 items-center justify-between flex-col sm:flex-row">
       <div class="flex items-center gap-4">
         <countries-search @submit="(value)=> filter.search = value" />
         <button class="flex items-center gap-2 p-3.5 group rounded-xl bg-white dark:bg-white-dark active:scale-90 transition-all" @click="randomChoice">

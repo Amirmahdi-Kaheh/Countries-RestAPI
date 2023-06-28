@@ -1,6 +1,6 @@
 <template>
   <div class="relative flex items-center">
-    <input v-model="formData.search" type="text" placeholder="Search for a Country ..." class="form-control pl-14" @keypress.enter="test">
+    <input v-model="formData.search" type="text" placeholder="Search for a Country ..." class="form-control pl-14 w-full sm:w-auto">
 
     <search-icon class="absolute left-4 w-6" />
   </div>

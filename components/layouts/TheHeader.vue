@@ -1,11 +1,11 @@
 <template>
-  <header class="sticky top-0 w-full py-8 bg-white dark:bg-white-dark z-30 border-b-2 border-silver dark:border-silver-dark dark:bg-primary-dark">
+  <header class="sticky top-0 w-full sm:py-8 py-4 bg-white dark:bg-white-dark z-30 border-b-2 border-silver dark:border-silver-dark dark:bg-primary-dark">
     <div class="container flex items-center justify-between">
       <nuxt-link to="/" class="flex items-center gap-4 group">
         <img src="~/static/icon.png" class="group-hover:animate-spin" alt="">
 
         <!--  #WEBSITE TITLE    -->
-        <h1 class="text-xl font-semibold">Where in the World ?</h1>
+        <h1 class="text-xl font-semibold hidden sm:block">Where in the World ?</h1>
       </nuxt-link>
 
       <div @click="changeTheme">

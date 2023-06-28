@@ -14,6 +14,11 @@ module.exports = {
     container: {
       // you can configure the container to be centered
       center: true,
+
+      padding: {
+        DEFAULT: '2rem',
+        sm: '0',
+      },
     },
     colors: {
       //  - Dark Blue (Dark Mode Elements): hsl(209, 23%, 22%)

@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-2 gap-2 mt-10">
+  <div class="grid sm:grid-cols-2 grid-cols-1 gap-2 mt-10">
     <!--   #NATIVE NAME   -->
     <div v-if="Object.values(data.name.nativeName).length > 0">
       <b>Native Name: </b>

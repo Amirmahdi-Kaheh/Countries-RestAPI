@@ -13,8 +13,8 @@
     <!--  HEAD END  -->
 
     <!--  BODY START  -->
-    <div class="grid grid-cols-12 items-start gap-10 mt-10">
-      <div class="col-span-5 sticky top-36">
+    <div class="grid grid-cols-12 items-start sm:gap-10 gap-y-10 mt-10">
+      <div class="sm:col-span-5 col-span-12 sm:sticky top-36">
         <v-lazy-image class="country-flag" :src="countryData.flags.svg" :alt="countryData.flags.alt" />
 
         <div class="grid grid-cols-2 gap-4 mt-4">
@@ -23,7 +23,7 @@
         </div>
       </div>
 
-      <div class="col-span-7">
+      <div class="sm:col-span-7 col-span-12">
         <h1 class="text-3xl font-bold">{{countryData.name.common}}</h1>
         <p class="text-xl text-gray dark:text-gray-dark">{{countryData.name.official}}</p>
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center gap-2">
+  <div class="flex items-center gap-2 sm:mt-0 mt-4">
     <button @click="$emit('sort-population')" :class="['flex items-center gap-2 px-5 py-2.5 rounded-xl active:scale-90 transition-all', {'bg-silver dark:bg-silver-dark': population !== 'none'}]">
       <sort-icon :class="[{'rotate-180':population==='asc'}]" />
 
