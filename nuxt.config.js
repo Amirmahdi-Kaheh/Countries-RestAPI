@@ -11,11 +11,11 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Countries-RestAPI',
+    title: process.env.APP_TITLE,
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1, user-scalable=no' },
+      { hid: 'description', name: 'description', content: process.env.APP_DESCRIPTION },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
@@ -58,7 +58,12 @@ export default {
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      lang: 'en'
+      lang: 'en',
+      name: process.env.PWA_NAME,
+      short_name: process.env.PWA_SHORTNAME,
+      theme_color: '#111517FF',
+      background_color: '#111517FF',
+      display: 'fullscreen'
     }
   },
 
