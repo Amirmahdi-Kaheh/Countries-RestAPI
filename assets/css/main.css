@@ -100,11 +100,11 @@
     font-style: normal;
     font-weight: 300;
     font-display: swap;
-    src: url("~assets/fonts/yekanbakh/eot/YekanBakhFaNum03Light.eot");
-    src: url("~assets/fonts/yekanbakh/eot/YekanBakhFaNum03Light.eot?#iefix")
+    src: url("assets/fonts/YekanBakh/eot/YekanBakhFaNum03Light.eot");
+    src: url("assets/fonts/YekanBakh/eot/YekanBakhFaNum03Light.eot?#iefix")
     format("embedded-opentype"),
       /* IE6-8 */
-    url("~assets/fonts/yekanbakh/woff/YekanBakhFaNum03Light.woff")
+    url("assets/fonts/YekanBakh/woff/YekanBakhFaNum03Light.woff")
     format("woff")
   }
 
@@ -113,11 +113,11 @@
     font-style: normal;
     font-weight: 500;
     font-display: swap;
-    src: url("~assets/fonts/yekanbakh/eot/YekanBakhFaNum05Medium.eot");
-    src: url("~assets/fonts/yekanbakh/eot/YekanBakhFaNum05Medium.eot?#iefix")
+    src: url("assets/fonts/YekanBakh/eot/YekanBakhFaNum05Medium.eot");
+    src: url("assets/fonts/YekanBakh/eot/YekanBakhFaNum05Medium.eot?#iefix")
     format("embedded-opentype"),
       /* IE6-8 */
-    url("~assets/fonts/yekanbakh/woff/YekanBakhFaNum05Medium.woff")
+    url("assets/fonts/YekanBakh/woff/YekanBakhFaNum05Medium.woff")
     format("woff")
   }
 
@@ -126,11 +126,11 @@
     font-style: normal;
     font-weight: 800;
     font-display: swap;
-    src: url("~assets/fonts/yekanbakh/eot/YekanBakhFaNum07Heavy.eot");
-    src: url("~assets/fonts/yekanbakh/eot/YekanBakhFaNum07Heavy.eot?#iefix")
+    src: url("assets/fonts/YekanBakh/eot/YekanBakhFaNum07Heavy.eot");
+    src: url("assets/fonts/YekanBakh/eot/YekanBakhFaNum07Heavy.eot?#iefix")
     format("embedded-opentype"),
       /* IE6-8 */
-    url("~assets/fonts/yekanbakh/woff/YekanBakhFaNum07Heavy.woff")
+    url("assets/fonts/YekanBakh/woff/YekanBakhFaNum07Heavy.woff")
     format("woff")
   }
 
